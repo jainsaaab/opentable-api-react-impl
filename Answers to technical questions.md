@@ -28,7 +28,7 @@ fn takes_ownership(some_string: String) { // some_string comes into scope
 
 **Question**: Please describe yourself using JSON.
 **Answer**: Okay
-```JSON
+```javascript
   {
     name: 'Aditya Jain',
     role: 'developer',
