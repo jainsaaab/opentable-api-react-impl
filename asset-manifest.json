@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/opentable-api-react-impl/static/css/main.ccd02ecf.chunk.css",
+    "main.js": "/opentable-api-react-impl/static/js/main.2e7e1787.chunk.js",
+    "main.js.map": "/opentable-api-react-impl/static/js/main.2e7e1787.chunk.js.map",
+    "runtime-main.js": "/opentable-api-react-impl/static/js/runtime-main.1785d0a4.js",
+    "runtime-main.js.map": "/opentable-api-react-impl/static/js/runtime-main.1785d0a4.js.map",
+    "static/js/2.02da841d.chunk.js": "/opentable-api-react-impl/static/js/2.02da841d.chunk.js",
+    "static/js/2.02da841d.chunk.js.map": "/opentable-api-react-impl/static/js/2.02da841d.chunk.js.map",
+    "index.html": "/opentable-api-react-impl/index.html",
+    "precache-manifest.1e6c61b3b297ac62ec0be38714801cb1.js": "/opentable-api-react-impl/precache-manifest.1e6c61b3b297ac62ec0be38714801cb1.js",
+    "service-worker.js": "/opentable-api-react-impl/service-worker.js",
+    "static/css/main.ccd02ecf.chunk.css.map": "/opentable-api-react-impl/static/css/main.ccd02ecf.chunk.css.map",
+    "static/js/2.02da841d.chunk.js.LICENSE.txt": "/opentable-api-react-impl/static/js/2.02da841d.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/opentable-api-react-impl/static/media/logo.76ea3212.png",
+    "static/media/spinner.gif": "/opentable-api-react-impl/static/media/spinner.235b9b3e.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1785d0a4.js",
+    "static/js/2.02da841d.chunk.js",
+    "static/css/main.ccd02ecf.chunk.css",
+    "static/js/main.2e7e1787.chunk.js"
+  ]
+}
