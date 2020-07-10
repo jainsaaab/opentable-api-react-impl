@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Search = (props) => {
+const Filter = (props) => {
     const [text, setText] = useState('');
-
-    const onChange = (q) => {
-        setText(q);
-        props.getQuery(q);
+    
+    const onChange = (t) => {
+        setText(t);
+        props.getFilterText(t.toLowerCase());
     }
 
     return (
@@ -14,7 +14,7 @@ const Search = (props) => {
                 <input 
                     type='text'
                     className='form-control'
-                    placeholder='Search: enter city name' 
+                    placeholder='Filter: enter restaurant name / street / area to refine your search' 
                     value={text}
                     onChange={e => onChange(e.target.value)}
                     autoFocus />
@@ -23,4 +23,4 @@ const Search = (props) => {
     )
 }
 
-export default Search;
+export default Filter;
