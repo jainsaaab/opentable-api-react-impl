@@ -6,21 +6,30 @@ import RestaurantGrid from './components/restaurants/RestaurantGrid';
 import Search from './components/ui/Search';
 import Filter from './components/ui/Filter';
 
-function App() {
-  const [items, setItems] = useState([])
+const App = () => {
+  const [data, setData] = useState({restaurants: []})
+  const [filteredData, setFilteredData] = useState({restaurants: []})
   const [isLoading, setIsLoading] = useState(true)
   const [query, setQuery] = useState('toronto')
   const [filterText, setFilterText] = useState('')
+  const [pageNo, setPageNo] = useState(1);
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=100`);
+      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=100&page=${pageNo}`);
+      setData(result.data);
+      setFilteredData(result.data);
+      setIsLoading(false);
+    }
 
-      // console.log(result.data.restaurants);
+    fetchItems();
+  }, [query, pageNo]);
+
+  useEffect(() => {
       const restaurants = [];
       let r = {};
 
-      for(r of result.data.restaurants) {
+      for(r of data.restaurants) {
         if(r.area.toLowerCase().indexOf(filterText) !== -1 || 
             r.name.toLowerCase().indexOf(filterText) !== -1 || 
             r.address.toLowerCase().indexOf(filterText) !== -1) {
@@ -28,19 +37,15 @@ function App() {
         }
       }
 
-      setItems(restaurants);
-      setIsLoading(false);
-    }
-
-    fetchItems();
-  }, [query, filterText]);
+      setFilteredData({...data, restaurants: restaurants, });
+  }, [filterText]);
 
   return (
     <div className="container">
       <Header />
       <Search getQuery={q => setQuery(q)}/>
       <Filter getFilterText={t => setFilterText(t)}/>
-      <RestaurantGrid items={items} isLoading={isLoading}/>
+      <RestaurantGrid items={filteredData.restaurants} isLoading={isLoading}/>
     </div>
   );
 }
