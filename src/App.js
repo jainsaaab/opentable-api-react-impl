@@ -47,10 +47,12 @@ const App = () => {
       <Search getQuery={q => setQuery(q)}/>
       <Filter getFilterText={t => setFilterText(t)}/>
       <RestaurantGrid items={filteredData.restaurants} isLoading={isLoading}/>
+      <br />
       <PagesBar 
         clicked={n => setPageNo(Number(n))}
         curPage={pageNo}
         totalPages={Math.ceil(data.total_entries / data.per_page)} />
+        <br /><br /><br />
     </div>
   );
 }
