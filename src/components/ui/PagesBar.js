@@ -2,7 +2,7 @@ import React from 'react';
 
 const PagesBar = (props) => {
     const divs = [];
-    if(props.curPage == 1) {
+    if(props.curPage === 1) {
         divs.push(<div key='prev'>&laquo;</div>);
     } else {
         divs.push(<div onClick={(e) => props.clicked(props.curPage - 1)} key='prev'>&laquo;</div>);
@@ -10,7 +10,7 @@ const PagesBar = (props) => {
     
     for(let i=1; i<=props.totalPages; i++) {
         let tmp;
-        if(i == props.curPage) {
+        if(i === props.curPage) {
             tmp = <div key={i} onClick={(e) => props.clicked(e.target.innerHTML)} className='active'>{i}</div>
         } else {
             tmp = <div key={i} onClick={(e) => props.clicked(e.target.innerHTML)}>{i}</div>
@@ -18,7 +18,7 @@ const PagesBar = (props) => {
         divs.push(tmp);
     }
 
-    if(props.curPage == props.totalPages) {
+    if(props.curPage === props.totalPages) {
         divs.push(<div key='next'>&raquo;</div>);
     } else {
         divs.push(<div onClick={(e) => props.clicked(props.curPage + 1)} key='next'>&raquo;</div>);
