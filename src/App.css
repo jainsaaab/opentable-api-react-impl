@@ -12,7 +12,8 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #000;
 }
 
 .container {
@@ -69,7 +70,7 @@ input[type='text'] {
 }
 
 .card {
-  cursor: pointer;
+  cursor: default;
   background-color: whitesmoke;
   padding: 10px;
   border-radius: 5px;
@@ -82,8 +83,8 @@ input[type='text'] {
   border-bottom: 1px #000 solid;
   padding-bottom: 10px;
   margin-bottom: 10px;
+  
 }
-
 .card li {
   list-style: none;
   padding-bottom: 10px;

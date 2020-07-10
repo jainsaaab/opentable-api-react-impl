@@ -29,6 +29,9 @@ const restaurantItem = (props) => {
             <li>
               <strong>Price:</strong> {getPrice(props.item.price)}
             </li>
+            <li>
+              <strong><a href={props.item.reserve_url}>Reserve Table</a></strong>
+            </li>
           </ul>
     </div>
   )
