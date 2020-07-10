@@ -48,11 +48,9 @@ const App = () => {
       <Filter getFilterText={t => setFilterText(t)}/>
       <RestaurantGrid items={filteredData.restaurants} isLoading={isLoading}/>
       <PagesBar 
-        prevDisabled={pageNo === 1} 
-        nextDisabled={(data.total_entries / data.per_page) < pageNo}
-        nextClicked={(e) => {setPageNo(pageNo+1)}}
-        prevClicked={(e) => {setPageNo(pageNo-1)}}
-        curPage={pageNo} />
+        clicked={n => setPageNo(Number(n))}
+        curPage={pageNo}
+        totalPages={Math.ceil(data.total_entries / data.per_page)} />
     </div>
   );
 }
