@@ -1,8 +1,8 @@
-**Question**: How long did you spend on the coding assignment? What would you add to your solution if you had more time?
+**Question**: How long did you spend on the coding assignment? What would you add to your solution if you had more time?<br />
 **Answer**: I took 2 days. I was thinking instead of pagination I could some sort of approach so that when user scrolls to the end it the page would fetch more results. Also I could have used redux but since I am relatively new in react I am yet to learn it. Maybe I will implement it when I will learn it.
 
 
-**Qusetion**: What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
+**Qusetion**: What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.<br />
 **Answer**: I have to say *Ownership* feature in rust which enables Rust to make memory safety guarantees without needing a garbage collector. It is a wide subject but here is a simple example where a function takes ownership of a variable.
 Example:
 ```rust
@@ -20,13 +20,13 @@ fn takes_ownership(some_string: String) { // some_string comes into scope
   // memory is freed.
 ```
 
-**Question**: How would you track down a performance issue in production? have you ever had to do this?
+**Question**: How would you track down a performance issue in production? have you ever had to do this?<br />
 **Answer**: I never did this. But I think Performance tab in development tools in a browser can be helpful.
 
-**Question**: How would you improve the API that you just used?
+**Question**: How would you improve the API that you just used?<br />
 **Answer**: The parame ter "per_page" only allows specific values (25, 50, 75, 100 in this case). I think it can be more flexible to allow other values. Also maybe implement it in graphQL.
 
-**Question**: Please describe yourself using JSON.
+**Question**: Please describe yourself using JSON.<br />
 **Answer**: Okay
 ```javascript
   {
