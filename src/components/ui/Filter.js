@@ -14,10 +14,9 @@ const Filter = (props) => {
                 <input 
                     type='text'
                     className='form-control'
-                    placeholder='Filter: enter restaurant name / street / area to refine your search' 
+                    placeholder='Filter: enter name / street / area to refine your search' 
                     value={text}
-                    onChange={e => onChange(e.target.value)}
-                    autoFocus />
+                    onChange={e => onChange(e.target.value)} />
             </form>
         </section>
     )

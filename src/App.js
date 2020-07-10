@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=50`);
+      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=100`);
 
       // console.log(result.data.restaurants);
       const restaurants = [];

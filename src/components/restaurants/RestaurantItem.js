@@ -1,10 +1,17 @@
 import React from 'react';
 
 const restaurantItem = (props) => {
-    return (
+  const getPrice = (n) => {
+    let p = "";
+    for(let i=0; i<n; i++) {
+      p += "$";
+    }
+
+    return p;
+  }
+
+  return (
     <div className='card'>
-      <div className='card-inner'>
-        <div className='card-front'>
           <h1>{props.item.name}</h1>
           <ul>
             <li>
@@ -19,14 +26,12 @@ const restaurantItem = (props) => {
             <li>
               <strong>Phone:</strong> {props.item.phone}
             </li>
+            <li>
+              <strong>Price:</strong> {getPrice(props.item.price)}
+            </li>
           </ul>
-        </div>
-        <div className='card-back'>
-
-        </div>
-      </div>
     </div>
-    )
+  )
 }
 
 export default restaurantItem;
