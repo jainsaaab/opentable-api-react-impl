@@ -1,5 +1,5 @@
 **Question**: How long did you spend on the coding assignment? What would you add to your solution if you had more time?<br />
-**Answer**: I took 2 days. I was thinking instead of pagination I could some sort of approach so that when user scrolls to the end it the page would fetch more results. Also I could have used redux but since I am relatively new in react I am yet to learn it. Maybe I will implement it when I will learn it.
+**Answer**: I took 2 days. I was thinking instead of pagination I could some sort of approach so that when user scrolls to the end it the page would fetch more results. Also I could have used redux but since I am relatively new in react I am yet to learn it. Maybe I will implement it when I will learn it. Also I am yet to learn how to create testcases in react.js so I haven't done any testcases yet.
 
 
 **Qusetion**: What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.<br />
