@@ -32,7 +32,7 @@ fn takes_ownership(some_string: String) { // some_string comes into scope
   {
     name: 'Aditya Jain',
     role: 'developer',
-    hobbies: ['fitness', 'programming', 'retro gaming', 'reading books (Philosophy mostly)']
+    hobbies: ['fitness', 'programming', 'retro gaming', 'reading books (Philosophy mostly)'],
     skills: ['java', 'python3', 'javascript', 'springboot', 'react.js', 'django web-framework'],
     experience: [
       {
