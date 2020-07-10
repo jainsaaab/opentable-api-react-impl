@@ -5,6 +5,7 @@ import axios from 'axios';
 import RestaurantGrid from './components/restaurants/RestaurantGrid';
 import Search from './components/ui/Search';
 import Filter from './components/ui/Filter';
+import PagesBar from './components/ui/PagesBar';
 
 const App = () => {
   const [data, setData] = useState({restaurants: []})
@@ -16,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=100&page=${pageNo}`);
+      const result = await axios(`https://opentable.herokuapp.com/api/restaurants?city=${query}&per_page=50&page=${pageNo}`);
       setData(result.data);
       setFilteredData(result.data);
       setIsLoading(false);
@@ -37,8 +38,8 @@ const App = () => {
         }
       }
 
-      setFilteredData({...data, restaurants: restaurants, });
-  }, [filterText]);
+      setFilteredData({...data, restaurants: restaurants});
+  }, [data, filterText]);
 
   return (
     <div className="container">
@@ -46,6 +47,12 @@ const App = () => {
       <Search getQuery={q => setQuery(q)}/>
       <Filter getFilterText={t => setFilterText(t)}/>
       <RestaurantGrid items={filteredData.restaurants} isLoading={isLoading}/>
+      <PagesBar 
+        prevDisabled={pageNo === 1} 
+        nextDisabled={(data.total_entries / data.per_page) < pageNo}
+        nextClicked={(e) => {setPageNo(pageNo+1)}}
+        prevClicked={(e) => {setPageNo(pageNo-1)}}
+        curPage={pageNo} />
     </div>
   );
 }

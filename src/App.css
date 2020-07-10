@@ -23,15 +23,15 @@ a {
 }
 
 .btn {
-  display: inline-block;
+  /* display: inline-block; */
   /* color: #fff; */
-  color: #000;
-  background-color: #3fb573;
-  font-size: 1em;
-  text-align: center;
-  padding: 10px 15px;
-  border: 0;
-  margin: 10px 0;
+  /* background-color: red; */
+  /* color: #000; */
+  /* font-size: 1em; */
+  /* text-align: center; */
+  /* padding: 10px 15px; */
+  /* border: 0; */
+  /* margin: 10px 0; */
 }
 
 header {
